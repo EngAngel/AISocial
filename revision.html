@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revisión de Código — AISocial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="navbar-logo">✦</div>
+        <span class="navbar-title">AI<span>Social</span></span>
+      </a>
+
+      <div class="navbar-links">
+        <a href="index.html"    class="nav-link">🏠 Inicio</a>
+        <a href="generar.html"  class="nav-link">✨ Generar</a>
+        <a href="revision.html" class="nav-link active">🔍 Revisión de código</a>
+      </div>
+
+      <div class="navbar-status">
+        <div class="status-dot"></div>
+        <span class="status-label">Claude Haiku</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE ════════════════════════════════════════════════ -->
+  <main class="page">
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="page-title">Revisor de <span class="gradient-text">Código con IA</span></h1>
+        <p class="page-subtitle">Pega tu código y recibe análisis detallado sobre estructura, legibilidad y buenas prácticas.</p>
+      </div>
+
+      <div class="grid-2">
+
+        <!-- ── Columna izquierda: formulario ────────────────── -->
+        <div class="card card-body">
+          <div class="card-header">
+            <div class="card-icon">🔍</div>
+            <h2 class="card-title">Código a revisar</h2>
+          </div>
+
+          <form id="form-revision" class="form" novalidate>
+
+            <div class="field">
+              <label class="field-label" for="lenguaje">Lenguaje</label>
+              <select class="input" id="lenguaje" name="lenguaje">
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="HTML/CSS">HTML / CSS</option>
+                <option value="SQL">SQL</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="codigo">Fragmento de código *</label>
+              <textarea
+                class="input code-input"
+                id="codigo"
+                name="codigo"
+                placeholder="Pega aquí tu código…"
+                rows="14"
+                spellcheck="false"
+              ></textarea>
+              <span class="field-error" id="error-codigo" style="display:none;">Debes ingresar código para analizar.</span>
+            </div>
+
+            <button type="submit" class="btn-primary" id="btn-analizar">
+              🔍 Analizar código
+            </button>
+
+          </form>
+        </div>
+
+        <!-- ── Columna derecha: resultado ──────────────────── -->
+        <div class="card card-body">
+          <div class="card-header">
+            <div class="card-icon">📋</div>
+            <h2 class="card-title">Análisis</h2>
+          </div>
+
+          <div id="resultado-estado">
+            <div class="empty-state">
+              <div class="empty-icon">🔍</div>
+              <p class="empty-title">El análisis aparecerá aquí</p>
+              <p class="empty-desc">Pega tu código y haz clic en "Analizar código"</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid-2 -->
+    </div><!-- /container -->
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer style="border-top:1px solid var(--border); padding:20px 24px; text-align:center; position:relative; z-index:1;">
+    <p style="color:var(--muted); font-size:0.78rem;">
+      Programación Web II · Docente: Javier Ochoa · 2026 ·
+      Powered by <span style="color:var(--violet-lt);">Claude AI</span> &amp; Pollinations.ai
+    </p>
+  </footer>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/shared.js"></script>
+  <script src="assets/revision.js"></script>
+</body>
+</html>

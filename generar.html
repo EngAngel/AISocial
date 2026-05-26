@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generar Contenido — AISocial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="navbar-logo">✦</div>
+        <span class="navbar-title">AI<span>Social</span></span>
+      </a>
+
+      <div class="navbar-links">
+        <a href="index.html"    class="nav-link">🏠 Inicio</a>
+        <a href="generar.html"  class="nav-link active">✨ Generar</a>
+        <a href="revision.html" class="nav-link">🔍 Revisión de código</a>
+      </div>
+
+      <div class="navbar-status">
+        <div class="status-dot"></div>
+        <span class="status-label">Claude Haiku</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE ════════════════════════════════════════════════ -->
+  <main class="page">
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="page-title">Generador de <span class="gradient-text">Contenido IA</span></h1>
+        <p class="page-subtitle">Crea publicaciones optimizadas para tus redes sociales con inteligencia artificial.</p>
+      </div>
+
+      <div class="grid-2">
+
+        <!-- ── Columna izquierda: formulario ────────────────── -->
+        <div class="card card-body">
+          <div class="card-header">
+            <div class="card-icon">✨</div>
+            <h2 class="card-title">Configurar publicación</h2>
+          </div>
+
+          <form id="form-generar" class="form" novalidate>
+
+            <div class="field">
+              <label class="field-label" for="tema">Tema *</label>
+              <input
+                class="input"
+                type="text"
+                id="tema"
+                name="tema"
+                placeholder="Ej: zapatillas deportivas Nike Air Max"
+                autocomplete="off"
+              />
+              <span class="field-error" id="error-tema" style="display:none;">El tema es obligatorio.</span>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="objetivo">Objetivo de negocio *</label>
+              <textarea
+                class="input"
+                id="objetivo"
+                name="objetivo"
+                placeholder="Ej: aumentar ventas online en jóvenes de 18–25 años"
+                rows="3"
+              ></textarea>
+              <span class="field-error" id="error-objetivo" style="display:none;">El objetivo es obligatorio.</span>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label class="field-label" for="tono">Tono</label>
+                <select class="input" id="tono" name="tono">
+                  <option value="profesional">Profesional</option>
+                  <option value="formal">Formal</option>
+                  <option value="creativo">Creativo</option>
+                  <option value="promocional">Promocional</option>
+                  <option value="juvenil">Juvenil</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="field-label" for="plataforma">Plataforma</label>
+                <select class="input" id="plataforma" name="plataforma">
+                  <option value="instagram">Instagram</option>
+                  <option value="twitter">Twitter / X</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="tiktok">TikTok</option>
+                  <option value="general">General</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="contexto">Contexto adicional <span style="font-weight:400; text-transform:none;">(opcional)</span></label>
+              <textarea
+                class="input"
+                id="contexto"
+                name="contexto"
+                placeholder="Ej: lanzamiento de temporada, descuento del 20%, envío gratis"
+                rows="2"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" id="btn-generar">
+              ✨ Generar
+            </button>
+
+          </form>
+        </div>
+
+        <!-- ── Columna derecha: resultado ──────────────────── -->
+        <div class="card card-body">
+          <div class="card-header">
+            <div class="card-icon">🎯</div>
+            <h2 class="card-title">Resultado</h2>
+          </div>
+
+          <div id="resultado-estado">
+            <div class="empty-state">
+              <div class="empty-icon">✨</div>
+              <p class="empty-title">Tu contenido aparecerá aquí</p>
+              <p class="empty-desc">Completa el formulario y haz clic en "Generar"</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid-2 -->
+    </div><!-- /container -->
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer style="border-top:1px solid var(--border); padding:20px 24px; text-align:center; position:relative; z-index:1;">
+    <p style="color:var(--muted); font-size:0.78rem;">
+      Programación Web II · Docente: Javier Ochoa · 2026 ·
+      Powered by <span style="color:var(--violet-lt);">Claude AI</span> &amp; Pollinations.ai
+    </p>
+  </footer>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/shared.js"></script>
+  <script src="assets/generar.js"></script>
+</body>
+</html>

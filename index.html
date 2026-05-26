@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AISocial — Plataforma Generadora de Contenido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="navbar-logo">✦</div>
+        <span class="navbar-title">AI<span>Social</span></span>
+      </a>
+
+      <div class="navbar-links">
+        <a href="index.html"   class="nav-link active">🏠 Inicio</a>
+        <a href="generar.html" class="nav-link">✨ Generar</a>
+        <a href="revision.html" class="nav-link">🔍 Revisión de código</a>
+      </div>
+
+      <div class="navbar-status">
+        <div class="status-dot"></div>
+        <span class="status-label">Claude 3.5 Haiku</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ════════════════════════════════════════════════ -->
+  <main class="page">
+    <div class="container">
+
+      <section class="hero">
+        <div class="hero-badge">✦ Programación Web II · Docente: Javier Ochoa</div>
+        <h1 class="hero-title">
+          Plataforma Generadora de<br>
+          <span class="gradient-text">Contenido para Redes Sociales</span>
+        </h1>
+        <p class="hero-sub">
+          Genera textos, hashtags e imágenes para tus publicaciones digitales con inteligencia artificial.
+          También revisa fragmentos de código con observaciones detalladas.
+        </p>
+        <div class="hero-actions">
+          <a href="generar.html" class="btn-primary">✨ Generar contenido</a>
+          <a href="revision.html" class="btn-secondary">🔍 Revisar código</a>
+        </div>
+      </section>
+
+      <!-- ══ FEATURES ══════════════════════════════════════════ -->
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3 class="feature-title">Generación de textos</h3>
+          <p class="feature-desc">
+            Crea publicaciones optimizadas para Instagram, Twitter/X, Facebook, LinkedIn y TikTok.
+            Adapta el tono a tu audiencia: formal, creativo, juvenil y más.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">#️⃣</div>
+          <h3 class="feature-title">Generación de hashtags</h3>
+          <p class="feature-desc">
+            Obtén hashtags principales y secundarios relacionados con tu tema y plataforma,
+            listos para aumentar la visibilidad de tu contenido.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🖼️</div>
+          <h3 class="feature-title">Generación de imágenes</h3>
+          <p class="feature-desc">
+            Cada publicación incluye una imagen generada automáticamente para acompañar
+            y complementar visualmente tu contenido.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3 class="feature-title">Revisión de código</h3>
+          <p class="feature-desc">
+            Ingresa cualquier fragmento de código y recibe observaciones sobre estructura,
+            legibilidad y posibles mejoras, sin ejecutarlo.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ══ HOW IT WORKS ══════════════════════════════════════ -->
+      <div class="card card-body" style="margin-bottom: 32px;">
+        <h2 style="color:white; font-weight:700; font-size:1.25rem; margin-bottom:24px; text-align:center;">
+          ¿Cómo funciona?
+        </h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;">
+
+          <div style="text-align:center;">
+            <div style="font-size:2rem; margin-bottom:10px;">1️⃣</div>
+            <h4 style="color:white; font-weight:600; margin-bottom:6px;">Ingresa tu idea</h4>
+            <p style="color:var(--muted); font-size:0.85rem;">
+              Escribe el tema de tu publicación y el objetivo que quieres lograr.
+            </p>
+          </div>
+
+          <div style="text-align:center;">
+            <div style="font-size:2rem; margin-bottom:10px;">2️⃣</div>
+            <h4 style="color:white; font-weight:600; margin-bottom:6px;">Configura el tono</h4>
+            <p style="color:var(--muted); font-size:0.85rem;">
+              Selecciona la plataforma y el tono de comunicación que mejor se adapte.
+            </p>
+          </div>
+
+          <div style="text-align:center;">
+            <div style="font-size:2rem; margin-bottom:10px;">3️⃣</div>
+            <h4 style="color:white; font-weight:600; margin-bottom:6px;">Genera con IA</h4>
+            <p style="color:var(--muted); font-size:0.85rem;">
+              Claude 3.5 Haiku crea el texto y los hashtags. Pollinations genera la imagen.
+            </p>
+          </div>
+
+          <div style="text-align:center;">
+            <div style="font-size:2rem; margin-bottom:10px;">4️⃣</div>
+            <h4 style="color:white; font-weight:600; margin-bottom:6px;">Copia y publica</h4>
+            <p style="color:var(--muted); font-size:0.85rem;">
+              Obtén el contenido listo para publicar con un solo clic en el botón de copiar.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ══ CTA ════════════════════════════════════════════════ -->
+      <div style="text-align:center; padding-bottom:32px;">
+        <a href="generar.html" class="btn-primary" style="font-size:1rem; padding:14px 32px;">
+          ✨ Comenzar ahora
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer style="border-top:1px solid var(--border); padding:20px 24px; text-align:center; position:relative; z-index:1;">
+    <p style="color:var(--muted); font-size:0.78rem;">
+      Programación Web II · Docente: Javier Ochoa · 2026 ·
+      Powered by <span style="color:var(--violet-lt);">Claude AI</span> &amp; Pollinations.ai
+    </p>
+  </footer>
+
+</body>
+</html>
